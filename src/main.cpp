@@ -16,7 +16,12 @@ int main()
         cout<<"5. Move hashes forward by 1."<<endl;
         cout<<"6. Move hashes backward by 1."<<endl;
         cout<<"7. Exit."<<endl;
-        cin>>t;
+        while(cout<<"Enter number"<<endl && !(cin>>t))
+                    {
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(),'\n');
+                        cout<<"Invalid input; please re-enter.\n";
+                    }
         switch(t)
         {
             case 1:
